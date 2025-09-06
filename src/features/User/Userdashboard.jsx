@@ -1,42 +1,62 @@
 import React, { useState } from "react";
-import AnimalRegistry from "./AnimalRegistry";
 import { Link } from "react-router-dom";
+import AnimalRegistry from "./AnimalRegistry";
 import Report from "./Report";
 import Complaint from "./Complaint";
 import UserProfile from "./UserProfile";
 import AnimalData from "./AnimalData";
 import Footer from "../../components/Footer";
-
+import AppLogo from "../../assets/images/AppLogo.jpg"; // Import the logo
 
 export default function UserDashboard() {
   const [profileMenuOpen, setProfileMenuOpen] = useState(false);
 
   return (
     <>
-      
-
       <div className="flex min-h-screen bg-gray-100 font-sans text-gray-800">
         {/* Sidebar */}
         <aside className="w-64 bg-green-900 text-white flex flex-col">
-          <div className="flex items-center px-6 py-5 font-bold text-2xl space-x-2 border-b border-green-800">
+          <div className="flex items-center gap-3 px-6 py-5 font-bold text-2xl border-b border-green-800">
+            {/* Logo */}
+            <div className="w-10 h-10 rounded-full overflow-hidden bg-white">
+              <img
+                src={AppLogo}
+                alt="VetLink Logo"
+                className="w-full h-full object-cover"
+              />
+            </div>
             <span>VetLink</span>
           </div>
           <nav className="flex-grow p-6 space-y-3">
             {/* Sidebar links */}
-            <a href="#" className="flex items-center space-x-3 bg-green-800 px-4 py-3 rounded-md">
+            <a
+              href="#"
+              className="flex items-center space-x-3 bg-green-800 px-4 py-3 rounded-md"
+            >
               <span>Dashboard</span>
             </a>
-           <Link to="/animaldata" className="flex items-center space-x-3 hover:bg-green-800 px-4 py-3 rounded-md">
-  <span>My Animals</span>
-</Link>
-            
-           <Link to="/report" className="flex items-center space-x-3 hover:bg-green-800 px-4 py-3 rounded-md">
-  <span>Reports</span>
-</Link>
-           <Link to="/complaint" className="flex items-center space-x-3 hover:bg-green-800 px-4 py-3 rounded-md">
-  <span>Complaints</span>
-</Link>
-           
+
+            <Link
+              to="/animaldata"
+              className="flex items-center space-x-3 hover:bg-green-800 px-4 py-3 rounded-md"
+            >
+              <span>My Animals</span>
+            </Link>
+
+            <Link
+              to="/report"
+              className="flex items-center space-x-3 hover:bg-green-800 px-4 py-3 rounded-md"
+            >
+              <span>Reports</span>
+            </Link>
+
+            <Link
+              to="/complaint"
+              className="flex items-center space-x-3 hover:bg-green-800 px-4 py-3 rounded-md"
+            >
+              <span>Complaints</span>
+            </Link>
+
             <a
               href="#"
               className="flex items-center space-x-3 hover:bg-green-800 px-4 py-3 rounded-md mt-auto pb-6"
@@ -70,11 +90,14 @@ export default function UserDashboard() {
                 </button>
                 {profileMenuOpen && (
                   <ul className="absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg py-2 text-gray-700 text-sm ring-1 ring-black ring-opacity-5 z-20">
-                   <Link to="/userprofile">
-  <li className="hover:bg-gray-100 px-4 py-2 cursor-pointer">Profile</li>
-</Link>
-                    {/* <li className="hover:bg-gray-100 px-4 py-2 cursor-pointer">Settings</li> */}
-                    <li className="hover:bg-gray-100 px-4 py-2 cursor-pointer">Logout</li>
+                    <Link to="/userprofile">
+                      <li className="hover:bg-gray-100 px-4 py-2 cursor-pointer">
+                        Profile
+                      </li>
+                    </Link>
+                    <li className="hover:bg-gray-100 px-4 py-2 cursor-pointer">
+                      Logout
+                    </li>
                   </ul>
                 )}
               </div>
@@ -123,27 +146,23 @@ export default function UserDashboard() {
             {/* Actions */}
             <div className="bg-white rounded-xl p-6 shadow flex flex-col space-y-4">
               <h3 className="font-semibold text-lg">Actions</h3>
-              {/* <button className="flex items-center space-x-2 px-4 py-3 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition">
-                <span>Add New Appointment</span>
-              </button> */}
-            
+              <Link to="/animalregistry">
+                <button className="flex items-center space-x-2 px-4 py-3 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition">
+                  <span>Register New Animal</span>
+                </button>
+              </Link>
 
-<Link to="/animalregistry">
-  <button className="flex items-center space-x-2 px-4 py-3 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition">
-    <span>Register New Animal</span>
-  </button>
-</Link>
+              <Link to="/report">
+                <button className="flex items-center space-x-2 px-4 py-3 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition">
+                  <span>View Reports</span>
+                </button>
+              </Link>
 
-            <Link to="/report">
-  <button className="flex items-center space-x-2 px-4 py-3 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition">
-    <span>View Reports</span>
-  </button>
-</Link> 
               <Link to="/complaint">
-  <button className="flex items-center space-x-2 px-4 py-3 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition">
-    <span>File Complaint</span>
-  </button>
-</Link>
+                <button className="flex items-center space-x-2 px-4 py-3 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition">
+                  <span>File Complaint</span>
+                </button>
+              </Link>
             </div>
 
             {/* Calendar */}

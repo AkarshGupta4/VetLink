@@ -5,12 +5,20 @@ import { VscGraph } from "react-icons/vsc";
 import { TbReport } from "react-icons/tb";
 import { CiDatabase } from "react-icons/ci";
 import { FaUserCircle } from "react-icons/fa";
+import AppLogo from "../assets/images/AppLogo.jpg"; // Correct import
 
 function Navbar() {
   return (
     <nav className="w-full bg-green-700 text-white px-6 py-3 flex items-center justify-between shadow-md">
       {/* Logo Section */}
-      <div>
+      <div className="flex items-center gap-3">
+        <div className="w-12 h-12 rounded-full flex items-center justify-center overflow-hidden bg-white">
+          <img
+            src={AppLogo} // Use imported image here
+            alt="VetLink Logo"
+            className="w-full h-full object-cover"
+          />
+        </div>
         <h3 className="font-bold text-3xl">VetLink</h3>
       </div>
 
@@ -31,11 +39,6 @@ function Navbar() {
         <Link to="/report" className="flex items-center gap-2 hover:underline">
           <TbReport /> Report
         </Link>
-
-        {/* doctor report section */}
-        {/* <Link to="/vetreport" className="flex items-center gap-2 hover:underline">
-          <TbReport /> Report
-        </Link> */}
 
         <Link to="/userprofile" className="flex items-center gap-2 hover:underline">
           <FaUserCircle /> Profile

@@ -44,12 +44,16 @@ export default function Signup() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4 py-10">
+    <div className="min-h-screen  bg-gradient-to-r from-green-50 to-blue-50 bg-gray-50 flex items-center justify-center px-4 py-10">
       <div className="max-w-md w-full space-y-8">
         {/* Header */}
         <div className="text-center">
-          <div className="mx-auto w-12 h-12 bg-green-600 rounded-full flex items-center justify-center">
-            <span className="text-white font-bold text-xl">🌿</span>
+          <div className="mx-auto w-12 h-12 rounded-full flex items-center justify-center overflow-hidden">
+            <img
+              src="/src/assets/images/AppLogo.jpg"
+              alt="App Logo"
+              className="w-full h-full object-cover"
+            />
           </div>
           <h2 className="mt-4 text-3xl font-extrabold text-gray-900">
             Create your account

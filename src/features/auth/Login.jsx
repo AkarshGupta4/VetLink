@@ -7,24 +7,14 @@ export default function Login() {
       <div className="w-full max-w-md bg-white rounded-lg shadow-md p-8">
         {/* Logo / Title */}
         <div className="text-center mb-6">
-          <div className="flex justify-center mb-2">
-            {/* Aap apna logo icon dal sakte ho */}
-            {/* <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-8 w-8 text-green-600"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M12 8c-1.657 0-3 1.343-3 3m0 0c0 1.657 1.343 3 3 3m0-6c1.657 0 3 1.343 3 3m-3-3V4m0 10v6m-7-7h4m6 0h4"
-              />
-            </svg> */}
+          <div className="flex justify-center mb-3">
+            <img
+              src="/src/assets/images/AppLogo.jpg" // Update to your actual logo path
+              alt="VetLink Logo"
+              className="w-12 h-12 rounded-full object-cover"
+            />
           </div>
-          <h1 className="text-2xl font-bold text-gray-800">Farm Portal</h1>
+          <h1 className="text-4xl font-bold text-gray-800">Login</h1>
           <p className="text-gray-500">Sign in to your account</p>
         </div>
 
@@ -62,7 +52,6 @@ export default function Login() {
           </div>
 
           {/* Submit */}
-          {/* Pet Owner Portal */}
           <Link
             to="/userhome"
             className="block w-full bg-green-600 text-white text-center py-2 rounded-lg hover:bg-green-700 transition"
@@ -70,23 +59,7 @@ export default function Login() {
             Sign In
           </Link>
 
-          {/* doctor home page link */}
-          {/* <Link
-            to="/vethome"
-            className="block w-full bg-green-600 text-white text-center py-2 rounded-lg hover:bg-green-700 transition"
-          >
-            Sign In
-          </Link> */}
-
-          {/* Admin */}
-
-           {/* <Link
-            to="/adminhome"
-            className="block w-full bg-green-600 text-white text-center py-2 rounded-lg hover:bg-green-700 transition"
-          >
-            Sign In
-          </Link> */}
-
+          {/* Other roles can be added here */}
         </form>
 
         {/* Footer */}
