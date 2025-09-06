@@ -8,6 +8,7 @@ import AnimalData from "./AnimalData";
 import Footer from "../../components/Footer";
 import AppLogo from "../../assets/images/AppLogo.jpg"; // Import the logo
 
+
 export default function UserDashboard() {
   const [profileMenuOpen, setProfileMenuOpen] = useState(false);
 
@@ -194,6 +195,7 @@ export default function UserDashboard() {
           </section>
         </main>
       </div>
+      
     </>
   );
 }
