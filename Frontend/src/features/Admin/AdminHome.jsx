@@ -90,7 +90,7 @@ export default function AdminHome() {
         <h2 className="text-2xl font-bold mb-6">Dashboard</h2>
 
         {/* Top Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-6">
           {[
             { title: "Total Farms", value: "12" },
             { title: "Animals", value: "145" },

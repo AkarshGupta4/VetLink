@@ -19,8 +19,8 @@ export default function Appointments() {
     <div className="p-8 bg-gray-100 min-h-screen">
       <h2 className="text-2xl font-bold mb-6">Appointments Management</h2>
 
-      <div className="bg-white rounded-xl shadow p-6">
-        <table className="w-full border-collapse">
+      <div className="bg-white rounded-xl shadow p-6 overflow-x-auto">
+        <table className="w-full border-collapse min-w-[600px]">
           <thead>
             <tr className="bg-green-600 text-white">
               <th className="py-3 px-4 text-left">Farmer</th>

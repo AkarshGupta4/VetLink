@@ -1,9 +1,10 @@
 import React from "react";
 
+
 function About() {
   return (
-    <div className="min-h-screen bg-white p-10">
-      <div className="bg-white shadow-lg rounded-lg p-10 w-full">
+    <div className="min-h-screen bg-white p-4 sm:p-10">
+      <div className="bg-white shadow-lg rounded-lg p-4 sm:p-10 w-full">
         {/* Title */}
         <h1 className="text-4xl font-bold text-green-600 mb-6 text-center">
           About Us

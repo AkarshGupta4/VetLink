@@ -106,7 +106,7 @@ function AnimalRegistry() {
     <>
       <Navbar />
       <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-green-50 to-blue-50 p-6">
-        <div className="bg-white shadow-md rounded-lg p-8 w-full max-w-lg">
+        <div className="bg-white shadow-md rounded-lg p-4 sm:p-8 w-full max-w-lg">
           <h2 className="text-2xl font-bold text-green-600 mb-4 text-center">
             Animal Registry Form
           </h2>
@@ -211,7 +211,7 @@ function AnimalRegistry() {
               />
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
                   Age

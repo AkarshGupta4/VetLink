@@ -91,7 +91,7 @@ export default function UserManagement() {
       <main className="flex-1 p-6 overflow-y-auto">
         <h2 className="text-2xl font-bold mb-6">User Management</h2>
 
-        <div className="bg-white rounded-lg shadow p-4">
+        <div className="bg-white rounded-lg shadow p-4 overflow-x-auto">
           {/* Top bar */}
           <div className="flex justify-between items-center mb-4">
             <button className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700">
@@ -110,7 +110,7 @@ export default function UserManagement() {
           </div>
 
           {/* User Table */}
-          <table className="w-full text-left border-collapse">
+          <table className="w-full text-left border-collapse min-w-[600px]">
             <thead>
               <tr className="border-b text-gray-600">
                 <th className="p-2">Name</th>

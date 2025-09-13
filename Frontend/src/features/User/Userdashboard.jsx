@@ -8,7 +8,6 @@ import AnimalData from "./AnimalData";
 import Footer from "../../components/Footer";
 import AppLogo from "../../assets/images/AppLogo.jpg"; // Import the logo
 
-
 export default function UserDashboard() {
   const [profileMenuOpen, setProfileMenuOpen] = useState(false);
 
@@ -106,7 +105,7 @@ export default function UserDashboard() {
           </header>
 
           {/* Overview Section */}
-          <section className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             <div className="bg-white rounded-xl p-6 shadow">
               <p className="text-gray-500">Total Animals</p>
               <p className="text-4xl font-bold">45</p>
@@ -126,7 +125,7 @@ export default function UserDashboard() {
           </section>
 
           {/* Main Dashboard Content */}
-          <section className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             {/* Quick Stats */}
             <div className="bg-white rounded-xl p-6 shadow space-y-4">
               <h3 className="font-semibold text-lg">Quick Stats</h3>
@@ -195,7 +194,7 @@ export default function UserDashboard() {
           </section>
         </main>
       </div>
-      
     </>
   );
 }
+

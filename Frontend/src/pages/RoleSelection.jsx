@@ -33,7 +33,7 @@ export default function LandingPage() {
       <div className="absolute inset-0 bg-black bg-opacity-20 pointer-events-none"></div>
 
       {/* Role Selection Section */}
-      <section className="px-6 py-10 bg-gray-100 z-20 bg-gradient-to-r from-green-50 to-blue-50">
+      <section className="px-2 sm:px-6 py-10 bg-gray-100 z-20 bg-gradient-to-r from-green-50 to-blue-50">
         <h2 className="text-3xl font-bold text-center mb-10 text-gray-800">
           Select Your Role
         </h2>
@@ -105,7 +105,7 @@ export default function LandingPage() {
       </section>
 
       {/* Key Features Cards */}
-      <section className="px-6 py-10 bg-gray-100 z-10 bg-gradient-to-r from-green-50 to-blue-50">
+      <section className="px-2 sm:px-6 py-10 bg-gray-100 z-10 bg-gradient-to-r from-green-50 to-blue-50">
         <h2 className="text-3xl font-bold text-center mb-10 text-black-800">
           Key Features by Role
         </h2>

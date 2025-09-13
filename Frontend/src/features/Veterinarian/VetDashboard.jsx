@@ -223,8 +223,6 @@ export default function VetDashboard() {
               <p className="text-4xl font-bold">20</p>
             </div>
           </section>
-
-          {/* Main Dashboard Content */}
           <section className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-7xl mx-auto">
             {/* Quick Stats */}
             <div className="bg-white rounded-xl p-6 shadow space-y-4">
@@ -301,3 +299,4 @@ export default function VetDashboard() {
     </>
   );
 }
+

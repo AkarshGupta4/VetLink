@@ -69,45 +69,47 @@ export default function MedicalRecords() {
   };
 
   return (
-    <div className="p-6 bg-gray-100 min-h-screen">
+    <div className="p-4 sm:p-6 bg-gray-100 min-h-screen">
       <h1 className="text-2xl font-bold mb-6">Medical Records</h1>
 
       {/* Records Table */}
-      <table className="w-full bg-white shadow rounded-lg">
-        <thead>
-          <tr className="bg-green-900 text-white">
-            <th className="p-3 text-left">Animal ID</th>
-            <th className="p-3 text-left">Species</th>
-            <th className="p-3 text-left">Breed</th>
-            <th className="p-3 text-left">Owner</th>
-            <th className="p-3">Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {records.map((animal) => (
-            <tr key={animal.id} className="border-b hover:bg-gray-50">
-              <td className="p-3">{animal.id}</td>
-              <td className="p-3">{animal.species}</td>
-              <td className="p-3">{animal.breed}</td>
-              <td className="p-3">{animal.owner}</td>
-              <td className="p-3 flex gap-3">
-                <button
-                  onClick={() => setSelectedRecord(animal)}
-                  className="px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700"
-                >
-                  View
-                </button>
-                <button
-                  onClick={() => downloadPDF(animal)}
-                  className="px-3 py-1 bg-green-600 text-white rounded hover:bg-green-700"
-                >
-                  Download
-                </button>
-              </td>
+      <div className="overflow-x-auto">
+        <table className="w-full bg-white shadow rounded-lg min-w-[600px]">
+          <thead>
+            <tr className="bg-green-900 text-white">
+              <th className="p-3 text-left">Animal ID</th>
+              <th className="p-3 text-left">Species</th>
+              <th className="p-3 text-left">Breed</th>
+              <th className="p-3 text-left">Owner</th>
+              <th className="p-3">Actions</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {records.map((animal) => (
+              <tr key={animal.id} className="border-b hover:bg-gray-50">
+                <td className="p-3">{animal.id}</td>
+                <td className="p-3">{animal.species}</td>
+                <td className="p-3">{animal.breed}</td>
+                <td className="p-3">{animal.owner}</td>
+                <td className="p-3 flex gap-3">
+                  <button
+                    onClick={() => setSelectedRecord(animal)}
+                    className="px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700"
+                  >
+                    View
+                  </button>
+                  <button
+                    onClick={() => downloadPDF(animal)}
+                    className="px-3 py-1 bg-green-600 text-white rounded hover:bg-green-700"
+                  >
+                    Download
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
       {/* Modal for details */}
       {selectedRecord && (

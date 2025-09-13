@@ -28,7 +28,7 @@ export default function AddPatientForm() {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100 p-6">
-      <div className="bg-white shadow-lg rounded-xl p-8 w-full max-w-2xl">
+      <div className="bg-white shadow-lg rounded-xl p-4 sm:p-8 w-full max-w-2xl">
         <h2 className="text-2xl font-bold text-green-700 mb-6">
           🐄 Add New Patient
         </h2>

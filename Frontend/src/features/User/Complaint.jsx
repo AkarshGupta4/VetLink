@@ -48,7 +48,7 @@ const Complaint = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 p-6 font-sans flex flex-col items-center">
+    <div className="min-h-screen bg-gray-100 p-4 sm:p-6 font-sans flex flex-col items-center">
       <div className="w-full max-w-xl">
         <h1 className="text-3xl font-bold mb-2">Animal Health Complaint</h1>
         <p className="mb-6 text-gray-700">
@@ -142,7 +142,7 @@ const Complaint = () => {
       </div>
 
       {submittedComplaints.length > 0 && (
-        <div className="mt-8 w-full max-w-2xl bg-white p-6 rounded-2xl shadow-lg">
+        <div className="mt-8 w-full max-w-2xl bg-white p-4 sm:p-6 rounded-2xl shadow-lg">
           <h2 className="text-xl font-bold mb-4">Submitted Complaints</h2>
           <ul className="space-y-3">
             {submittedComplaints.map((c, index) => (

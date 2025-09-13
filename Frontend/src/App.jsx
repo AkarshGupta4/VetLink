@@ -22,6 +22,7 @@ import VeterinarianProfile from "./features/Veterinarian/VeterinarianProfile.jsx
 import AnimalData from "./features/User/AnimalData.jsx";
 import AdminHome from "./features/Admin/AdminHome.jsx";
 import UserManagement from "./features/Admin/UserManagement.jsx";
+import Contact from "./components/contact.jsx";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
       <Route path="/role-selection" element={<RoleSelection />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/contact" element={<Contact />} />
 
       {/* User Pages */}
       <Route path="/userhome" element={<UserHome />} />
